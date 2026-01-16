@@ -1,17 +1,23 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import WhoWeSupport from "./components/WhoWeSupport";
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white dark:bg-black">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-4xl font-bold text-center w-full mb-10 text-gray-900 dark:text-white">
-          Contact Us
-        </h1>
-      </div>
+    <main className="flex min-h-screen flex-col bg-white">
+      {/* <Navbar /> Moved to Hero for strict layout requirements */}
+      <Hero />
+      <WhoWeSupport />
+      <Services />
+      <Testimonials />
+      <ContactForm />
 
-      <div className="w-full max-w-md">
-        <ContactForm />
-      </div>
+      <footer className="w-full bg-black py-8 text-center text-gray-500 text-sm">
+        <p>&copy; {new Date().getFullYear()} My Website. All rights reserved.</p>
+      </footer>
     </main>
   );
 }
