@@ -11,9 +11,11 @@ import Services from "./components/Services";
 import TrustedPartnerships from "./components/TrustedPartnerships";
 import WhoWeWorkWith from "./components/WhoWeWorkWith";
 import ReferralProcess from "./components/ReferralProcess";
+import EarnWithConfidence from "./components/EarnWithConfidence";
 import FAQ from "./components/FAQ";
-import Testimonials from "./components/Testimonials";
+
 import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 
 export default function Home() {
   // Main Page Component
@@ -32,13 +34,10 @@ export default function Home() {
       <TrustedPartnerships />
       <WhoWeWorkWith />
       <ReferralProcess />
+      <EarnWithConfidence />
       <FAQ />
-      <Testimonials />
       <ContactForm />
-
-      <footer className="w-full bg-black py-8 text-center text-gray-500 text-sm">
-        <p>&copy; {new Date().getFullYear()} My Website. All rights reserved.</p>
-      </footer>
+      <Footer />
     </main>
   );
 }
