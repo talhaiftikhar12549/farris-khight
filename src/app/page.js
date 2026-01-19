@@ -9,6 +9,9 @@ import SuccessStories from "./components/SuccessStories";
 import AccommodationStandards from "./components/AccommodationStandards";
 import Services from "./components/Services";
 import TrustedPartnerships from "./components/TrustedPartnerships";
+import WhoWeWorkWith from "./components/WhoWeWorkWith";
+import ReferralProcess from "./components/ReferralProcess";
+import FAQ from "./components/FAQ";
 import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
 
@@ -27,6 +30,9 @@ export default function Home() {
       <AccommodationStandards />
       <Services />
       <TrustedPartnerships />
+      <WhoWeWorkWith />
+      <ReferralProcess />
+      <FAQ />
       <Testimonials />
       <ContactForm />
 

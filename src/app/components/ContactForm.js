@@ -1,40 +1,134 @@
+"use client";
+
 export default function ContactForm() {
     return (
-        <section id="contact" className="w-full bg-white text-black py-20 px-6 md:px-12 lg:px-24">
-            <div className="max-w-4xl mx-auto bg-gray-50 p-8 md:p-12 rounded-3xl shadow-xl">
-                <div className="text-center mb-10">
-                    <h2 className="text-3xl font-bold mb-2">Get in <span className="text-primary">Touch</span></h2>
-                    <p className="text-gray-500">We are here to help. Send us a message.</p>
+        <section className="w-full bg-white text-black py-24 px-[60px]">
+            <div className="w-full flex flex-col lg:flex-row gap-20">
+                {/* Left: Heading & Description */}
+                <div className="flex-1">
+                    <h2
+                        className="uppercase mb-12"
+                        style={{
+                            fontFamily: "var(--font-instrument-sans)",
+                            fontWeight: 400,
+                            fontSize: "62px",
+                            lineHeight: "100%",
+                            letterSpacing: "-0.04em",
+                            color: "#171717",
+                        }}
+                    >
+                        WE’RE ONLY A
+                        <br />
+                        MESSAGE AWAY
+                    </h2>
+
+                    <p
+                        className="max-w-md"
+                        style={{
+                            fontFamily: "var(--font-geist-sans)",
+                            fontWeight: 300,
+                            fontSize: "18px",
+                            lineHeight: "140%",
+                            letterSpacing: "-0.02em",
+                            color: "#171717",
+                        }}
+                    >
+                        If you feel our homes offer the calm and care you are looking for, we
+                        would love to hear from you. Reach out whenever it feels right and
+                        our team will respond with kindness and support.
+                    </p>
                 </div>
 
-                <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">Name</label>
-                            <input type="text" name="name" id="name" required className="mt-2 block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 bg-white" placeholder="Your Name" />
+                {/* Right: Form */}
+                <div className="flex-1">
+                    <form className="flex flex-col gap-6">
+                        {/* First Row */}
+                        <div className="flex flex-col md:flex-row gap-6">
+                            <div className="flex-1 flex flex-col gap-2">
+                                <label className="font-semibold text-sm">First Name</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your first name"
+                                    className="w-full p-4 rounded-full border border-gray-300 focus:outline-none focus:border-[#F2792E]"
+                                    style={{
+                                        fontFamily: "var(--font-geist-sans)",
+                                        fontSize: "16px",
+                                    }}
+                                />
+                            </div>
+                            <div className="flex-1 flex flex-col gap-2">
+                                <label className="font-semibold text-sm">Last Name</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your last name"
+                                    className="w-full p-4 rounded-full border border-gray-300 focus:outline-none focus:border-[#F2792E]"
+                                    style={{
+                                        fontFamily: "var(--font-geist-sans)",
+                                        fontSize: "16px",
+                                    }}
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor="phone" className="block text-sm font-semibold leading-6 text-gray-900">Phone</label>
-                            <input type="tel" name="phone" id="phone" required className="mt-2 block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 bg-white" placeholder="Your Phone" />
+
+                        {/* Second Row */}
+                        <div className="flex flex-col md:flex-row gap-6">
+                            <div className="flex-1 flex flex-col gap-2">
+                                <label className="font-semibold text-sm">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    placeholder="Enter your phone number"
+                                    className="w-full p-4 rounded-full border border-gray-300 focus:outline-none focus:border-[#F2792E]"
+                                    style={{
+                                        fontFamily: "var(--font-geist-sans)",
+                                        fontSize: "16px",
+                                    }}
+                                />
+                            </div>
+                            <div className="flex-1 flex flex-col gap-2">
+                                <label className="font-semibold text-sm">Email Address</label>
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email address"
+                                    className="w-full p-4 rounded-full border border-gray-300 focus:outline-none focus:border-[#F2792E]"
+                                    style={{
+                                        fontFamily: "var(--font-geist-sans)",
+                                        fontSize: "16px",
+                                    }}
+                                />
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">Email</label>
-                        <input type="email" name="email" id="email" required className="mt-2 block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 bg-white" placeholder="you@example.com" />
-                    </div>
+                        {/* Message */}
+                        <div className="flex flex-col gap-2">
+                            <label className="font-semibold text-sm">Message</label> {/* Typo in design says "Massage", correcting to "Message" unless user asks otherwise. Design likely typo. */}
+                            <div className="relative">
+                                <textarea
+                                    placeholder="Enter your message here..."
+                                    rows={6}
+                                    className="w-full p-6 rounded-[24px] border border-gray-300 focus:outline-none focus:border-[#F2792E] resize-none"
+                                    style={{
+                                        fontFamily: "var(--font-geist-sans)",
+                                        fontSize: "16px",
+                                    }}
+                                />
+                                <span className="absolute bottom-4 right-6 text-xs text-gray-400">0/300</span>
+                            </div>
+                        </div>
 
-                    <div>
-                        <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">Message</label>
-                        <textarea id="message" name="message" rows={4} className="mt-2 block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 bg-white" placeholder="How can we help?" defaultValue={''} />
-                    </div>
-
-                    <div>
-                        <button type="submit" className="flex w-full justify-center rounded-full bg-primary px-8 py-4 text-sm font-bold leading-6 text-white shadow-lg hover:bg-orange-600 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                            SEND MESSAGE
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            className="w-full py-4 rounded-full text-white font-medium hover:bg-[#d66523] transition-colors mt-4"
+                            style={{
+                                backgroundColor: "#F2792E",
+                                fontFamily: "var(--font-geist-sans)",
+                                fontSize: "16px",
+                            }}
+                        >
+                            Submit form
                         </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </section>
     );
