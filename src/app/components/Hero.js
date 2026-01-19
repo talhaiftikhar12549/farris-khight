@@ -21,7 +21,8 @@ export default function Hero() {
                 {/* Container 1: Icon (Logo) and H1 */}
                 <div className="flex flex-col flex-grow">
                     {/* Logo (Top Left) */}
-                    <div className="relative h-12 w-48 mb-auto">
+                    {/* Logo (Top Left) */}
+                    <div className="relative h-12 w-48 mb-[118px]">
                         <Image
                             src="/images/logo.png"
                             alt="Farris Knight Logo"
@@ -31,8 +32,8 @@ export default function Hero() {
                         />
                     </div>
 
-                    {/* H1 (Vertically Centered in remaining space) */}
-                    <div className="flex flex-col justify-center flex-grow">
+                    {/* H1 (Fixed distance from logo) */}
+                    <div className="flex flex-col">
                         <h1
                             className="text-white uppercase leading-[100%] tracking-[-0.04em]"
                             style={{
