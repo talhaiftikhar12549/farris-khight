@@ -14,19 +14,19 @@ export default function EarnWithConfidence() {
         },
         {
             title: "Agreement And Guaranteed Rent",
-            description: "Maximize Your Property's with Premium Price",
+            description: "You receive a clear agreement with guaranteed rent, giving you certainty and peace of mind.",
             icon: "/images/earn/agreement-icon.png",
             image: "/images/placeholder-agreement.png"
         },
         {
             title: "Hassle-Free Management",
-            description: "Build Wealth with Exclusive Opportunities",
+            description: "We find suitable residents and manage all daily responsibilities on your behalf.",
             icon: "/images/earn/wealth-icon.png",
             image: "/images/placeholder-management.png"
         },
         {
             title: "Ongoing Support And Updates",
-            description: "Rent Exclusive and luxury Properties",
+            description: "We keep you informed and ensure your property remains in excellent condition.",
             icon: "/images/earn/support-icon.png",
             image: "/images/placeholder-support.png"
         },
@@ -156,10 +156,13 @@ export default function EarnWithConfidence() {
 
                                 {/* Floating Image for Active Section */}
                                 {isActive && (
-                                    <div className="absolute right-[20%] -top-12 hidden lg:block rotate-6 shadow-xl w-[180px] h-[180px] bg-gray-300 rounded-xl border-4 border-white overflow-hidden">
-                                        {/* Replace with step.image when real images are available */}
-                                        <div className="w-full h-full bg-gray-400/50 flex items-center justify-center text-gray-500 text-xs text-center p-2">
-                                            {step.title} Image
+                                    <div className="absolute right-[10%] -top-8 hidden lg:block rotate-6 shadow-2xl w-[220px] h-[220px] bg-white rounded-xl p-2 z-20">
+                                        <div className="relative w-full h-full bg-gray-100 rounded-lg overflow-hidden">
+                                            {/* Placeholder content to mimic the keys image */}
+                                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 text-center p-4">
+                                                <span className="text-4xl mb-2">🔑</span>
+                                                <span className="text-xs text-gray-400">Image Placeholder</span>
+                                            </div>
                                         </div>
                                     </div>
                                 )}
