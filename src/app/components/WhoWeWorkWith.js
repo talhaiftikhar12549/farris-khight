@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function WhoWeWorkWith() {
     const partners = [
-        { name: "Foster carers", image: "/images/whoweworkwith/foster-carers.png" },
-        { name: "Local authorities", image: "/images/whoweworkwith/local-authorities.png" },
-        { name: "Social workers", image: "/images/whoweworkwith/social-workers.png" },
-        { name: "Care leaver services", image: "/images/whoweworkwith/care-leaver.png" },
+        { name: "Foster carers", image: "/images/whoweworkwith/foster-v2.png" },
+        { name: "Local authorities", image: "/images/whoweworkwith/local-v2.png" },
+        { name: "Social workers", image: "/images/whoweworkwith/social-v2.png" },
+        { name: "Care leaver services", image: "/images/whoweworkwith/care-leaver-v2.png" },
     ];
 
     return (
