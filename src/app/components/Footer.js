@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-[#0F0F0F] text-white py-16 px-[60px]">
+        <footer className="w-full bg-[#111111] text-white py-[20px] px-[60px] border-t border-white/10">
             <div className="w-full flex flex-col items-center justify-center gap-8">
                 {/* Logo */}
                 <div className="relative w-[300px] h-[60px]"> {/* Adjust dimensions based on actual logo aspect ratio */}
