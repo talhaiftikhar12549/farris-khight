@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ReferralProcess() {
     const steps = [
@@ -64,11 +65,16 @@ export default function ReferralProcess() {
                     </div>
 
                     <button
-                        className="w-fit flex items-center gap-2 px-8 py-4 rounded-full transition-all duration-300 bg-[#F2792E] hover:bg-[#d66523] hover:scale-105"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="w-fit inline-flex items-center gap-2 px-8 py-4 rounded-full transition-all duration-300 bg-[#F2792E] hover:bg-[#d66523] hover:scale-105"
                         style={{
                             fontFamily: "var(--font-geist-sans)",
                             fontWeight: 500,
                             fontSize: "16px",
+                            cursor: 'pointer'
                         }}
                     >
                         Make a Referral

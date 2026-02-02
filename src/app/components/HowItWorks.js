@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export default function HowItWorks() {
@@ -105,20 +106,24 @@ export default function HowItWorks() {
 
                 {/* Button */}
                 <div className="flex justify-center mt-8">
-                    <Link
-                        href="/apply"
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
                         className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-medium transition-transform hover:scale-105"
                         style={{
                             fontFamily: 'var(--font-geist-sans)',
                             fontSize: '16px',
-                            backgroundColor: '#F2792E'
+                            backgroundColor: '#F2792E',
+                            cursor: 'pointer'
                         }}
                     >
                         Start Your Application
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </Link>
+                    </button>
                 </div>
 
             </div>

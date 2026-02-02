@@ -42,7 +42,7 @@ export default function ContactForm() {
     };
 
     return (
-        <section className="w-full bg-white text-black py-24 px-[60px]">
+        <section id="contact-form" className="w-full bg-white text-black py-24 px-[60px]">
             <div className="w-full flex flex-col lg:flex-row gap-20">
                 {/* Left: Heading & Description */}
                 <div className="flex-1">
