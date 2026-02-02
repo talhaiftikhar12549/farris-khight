@@ -33,22 +33,24 @@ export default function WhatWeOffer() {
         <section className="w-full bg-[#111111] text-white py-24 px-[60px]">
             <div className="w-full flex flex-col gap-20">
                 {/* Header Section */}
-                <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-                    <h2
-                        className="uppercase max-w-sm"
-                        style={{
-                            fontFamily: 'var(--font-instrument-sans)',
-                            fontWeight: 400,
-                            fontSize: '62px',
-                            lineHeight: '100%',
-                            letterSpacing: '-0.04em',
-                        }}
-                    >
-                        What We<br />
-                        Offer
-                    </h2>
+                <div className="flex flex-col md:flex-row items-start">
+                    <div className="w-[45%] ">
+                        <h2
+                            className="uppercase"
+                            style={{
+                                fontFamily: 'var(--font-instrument-sans)',
+                                fontWeight: 400,
+                                fontSize: '62px',
+                                lineHeight: '100%',
+                                letterSpacing: '-0.04em',
+                            }}
+                        >
+                            What We<br />
+                            Offer
+                        </h2>
+                    </div>
 
-                    <div className="max-w-xl flex flex-col gap-8">
+                    <div className="w-[55%] flex flex-col gap-8">
                         <div className="flex flex-col gap-6 text-gray-300">
                             <p
                                 style={{
@@ -75,9 +77,13 @@ export default function WhatWeOffer() {
                         <div
                             key={index}
                             className={`
-                                relative flex flex-col items-center text-center p-8 rounded-[20px] aspect-[4/5] justify-center gap-6 transition-all duration-300 hover:scale-[1.02]
-                                ${offer.active ? 'bg-[#FF6B00] text-white' : 'bg-[#1A1A1A] text-white'}
+                                relative flex flex-col items-center text-center rounded-[20px] justify-center gap-6 transition-all duration-300 hover:scale-[1.02]
+                                ${offer.active ? 'text-white' : 'bg-[#1A1A1A] text-white'}
                             `}
+                            style={{
+                                padding: '30px 24px 50px 24px',
+                                background: offer.active ? 'linear-gradient(131.67deg, #F59929 0%, #F15933 100%)' : undefined
+                            }}
                         >
                             {/* Icon Circle */}
                             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-4 shrink-0">

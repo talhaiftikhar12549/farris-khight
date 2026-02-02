@@ -11,7 +11,7 @@ export default function OurMission() {
                     fill
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/50" /> {/* Overlay for readability */}
+                <div className="absolute inset-0 bg-black/0" /> {/* Overlay for readability */}
             </div>
 
             {/* Content */}

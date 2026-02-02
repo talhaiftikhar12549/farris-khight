@@ -59,10 +59,21 @@ export default function HowItWorks() {
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className="bg-[#1A1A1A] text-white p-12 rounded-[20px] flex flex-col gap-8 min-h-[400px]"
+                            className="bg-[#333333] text-white p-12 rounded-[20px] flex flex-col gap-[80px] "
                         >
                             {/* Number Pill */}
-                            <div className="w-fit px-4 py-2 border border-white/30 rounded-full text-sm font-medium">
+                            <div
+                                className="border border-white/30 flex items-center justify-center text-sm font-medium"
+                                style={{
+                                    width: '82px',
+                                    height: '45px',
+                                    borderRadius: '38px',
+                                    padding: '20px',
+                                    gap: '15px',
+                                    opacity: 1,
+                                    transform: 'rotate(0deg)'
+                                }}
+                            >
                                 {step.number}
                             </div>
 
