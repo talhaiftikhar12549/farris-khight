@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function AccommodationStandards() {
@@ -14,13 +14,15 @@ export default function AccommodationStandards() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
-    };
+    // Auto-rotate
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % images.length);
+        }, 3000); // 3 seconds
+        return () => clearInterval(interval);
+    }, [images.length]); // Dependency on length
 
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-    };
+    /* Manual navigation removed */
 
     return (
         <section className="w-full bg-white text-black py-24 border-b border-gray-100 overflow-hidden">
@@ -62,19 +64,7 @@ export default function AccommodationStandards() {
 
             {/* Center Mode Carousel */}
             <div className="relative w-full h-[600px] flex items-center justify-center mt-10">
-                {/* Navigation Buttons */}
-                <button
-                    onClick={prevSlide}
-                    className="absolute left-4 md:left-12 z-40 w-12 h-12 rounded-full border border-black/10 hover:bg-black/5 flex items-center justify-center transition-colors bg-white/80 backdrop-blur-sm"
-                >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
-                </button>
-                <button
-                    onClick={nextSlide}
-                    className="absolute right-4 md:right-12 z-40 w-12 h-12 rounded-full border border-black/10 hover:bg-black/5 flex items-center justify-center transition-colors bg-white/80 backdrop-blur-sm"
-                >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
-                </button>
+                {/* Buttons removed */}
 
                 {/* Slides Container */}
                 <div className="relative w-full h-full flex items-center justify-center perspective-1000">
