@@ -25,7 +25,7 @@ export default function Services() {
     ];
 
     return (
-        <section className="w-full bg-white text-black py-32 px-[60px]">
+        <section className="w-full bg-white text-black py-24 px-[60px]">
             <div className="w-full">
                 <h2
                     className="text-center uppercase mb-24"
@@ -36,7 +36,6 @@ export default function Services() {
                         lineHeight: "100%",
                         letterSpacing: "-0.04em",
                         color: "#171717",
-                        // Matches the slight shadow/bold look in image if any, but clean text is standard
                         textShadow: "0px 1px 2px rgba(0,0,0,0.1)"
                     }}
                 >
@@ -49,7 +48,7 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="flex flex-col md:flex-row justify-between items-start py-12 border-b border-black/10 transition-colors hover:bg-gray-50"
+                            className="flex flex-col md:flex-row justify-between items-start py-12 border-b border-black/10 transition-colors"
                         >
                             <h3
                                 className="w-full md:w-1/3 mb-4 md:mb-0"
@@ -64,7 +63,7 @@ export default function Services() {
                                 {service.title}
                             </h3>
                             <p
-                                className="w-full md:w-1/2"
+                                className="w-full md:w-1/2 px-4"
                                 style={{
                                     fontFamily: "var(--font-geist-sans)",
                                     fontWeight: 400,
