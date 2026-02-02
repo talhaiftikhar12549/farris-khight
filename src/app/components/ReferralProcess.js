@@ -64,9 +64,8 @@ export default function ReferralProcess() {
                     </div>
 
                     <button
-                        className="w-fit flex items-center gap-2 px-8 py-4 rounded-full transition-colors hover:bg-[#d66523]"
+                        className="w-fit flex items-center gap-2 px-8 py-4 rounded-full transition-all duration-300 bg-[#F2792E] hover:bg-[#d66523] hover:scale-105"
                         style={{
-                            backgroundColor: "#F2792E",
                             fontFamily: "var(--font-geist-sans)",
                             fontWeight: 500,
                             fontSize: "16px",

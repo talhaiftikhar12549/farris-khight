@@ -179,9 +179,8 @@ export default function ContactForm() {
                         <button
                             type="submit"
                             disabled={status.loading}
-                            className="w-full py-4 rounded-full text-white font-medium hover:bg-[#d66523] transition-colors mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full py-4 rounded-full text-white font-medium bg-[#F2792E] hover:bg-[#d66523] transition-all duration-300 hover:scale-105 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                             style={{
-                                backgroundColor: "#F2792E",
                                 fontFamily: "var(--font-geist-sans)",
                                 fontSize: "16px",
                             }}
