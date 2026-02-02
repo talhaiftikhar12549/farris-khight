@@ -76,7 +76,12 @@ export default function SuccessStories() {
                         <div className="flex gap-4">
                             <button
                                 onClick={prevStory}
-                                className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                className="border border-white flex items-center justify-center hover:bg-white/10 transition-colors"
+                                style={{
+                                    width: '75px',
+                                    height: '42px',
+                                    borderRadius: '50px'
+                                }}
                             >
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -84,7 +89,12 @@ export default function SuccessStories() {
                             </button>
                             <button
                                 onClick={nextStory}
-                                className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:bg-white/90 transition-colors"
+                                className="bg-white text-black flex items-center justify-center hover:bg-white/90 transition-colors"
+                                style={{
+                                    width: '75px',
+                                    height: '42px',
+                                    borderRadius: '50px'
+                                }}
                             >
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
