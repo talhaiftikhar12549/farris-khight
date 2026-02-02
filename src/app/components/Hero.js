@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section className="relative w-full h-screen bg-black text-white overflow-hidden">
-            {/* Background Image */}
+
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/hero-bg.jpg" // Assuming this is the path, will verify
+                    src="/images/hero-bg.jpg"
                     alt="Modern house at night"
                     fill
                     className="object-cover"
@@ -16,7 +16,7 @@ export default function Hero() {
             </div>
 
             {/* Main Layout Container - Padding 80px 60px */}
-            <div className="relative z-10 w-full h-full flex flex-col justify-between px-[60px] py-[80px]">
+            <div className="relative z-10 w-full h-full flex flex-col justify-between px-[60px] pt-[20px] pb-[80px]">
 
                 {/* Container 1: Icon (Logo) and H1 */}
                 <div className="flex flex-col flex-grow">
@@ -49,33 +49,27 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* Container 2: Line and P tag content */}
-                <div className="w-full">
+                {/* Container 2: Flex Row with Line and Text */}
+                <div className="w-full flex flex-row items-center gap-6">
                     {/* Horizontal Divider Line */}
-                    <div className="w-full h-[1px] bg-white/40 mb-6"></div>
+                    <div className="flex-grow h-[1px] bg-white/40"></div>
 
-                    {/* Subtext aligned to the right */}
-                    <div className="flex justify-end w-full">
-                        <p
-                            className="text-white text-right max-w-sm"
-                            style={{
-                                fontFamily: 'var(--font-geist-sans)',
-                                fontWeight: 400,
-                                fontSize: '18px',
-                                lineHeight: '120%',
-                                letterSpacing: '-0.02em',
-                            }}
-                        >
-                            A welcoming place to live, grow, and access the guidance you need to move forward with confidence
-                        </p>
-                    </div>
+                    {/* Subtext */}
+                    <p
+                        className="text-white text-left max-w-sm"
+                        style={{
+                            fontFamily: 'var(--font-geist-sans)',
+                            fontWeight: 400,
+                            fontSize: '18px',
+                            lineHeight: '120%',
+                            letterSpacing: '-0.02em',
+                        }}
+                    >
+                        A welcoming place to live, grow, and access the guidance you need to move forward with confidence
+                    </p>
                 </div>
             </div>
 
-            {/* Note: Removed the thin outer border as the padding constraints likely define the visual bounds now, 
-                 but if the user wants the border *inside* the padding, it would go here. 
-                 Previous design had it. I will leave it out unless requested to avoid cluttering the specific padding request. 
-             */}
         </section>
     );
 }
