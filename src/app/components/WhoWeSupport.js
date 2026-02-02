@@ -60,7 +60,7 @@ export default function WhoWeSupport() {
                 </div>
 
                 {/* Right Image */}
-                <div className="w-full relative min-h-[500px] rounded-[30px] overflow-hidden">
+                <div className="w-full md:w-1/2 relative min-h-[500px] rounded-[30px] overflow-hidden">
                     <Image
                         src="/images/who-we-support.jpg"
                         alt="Comfortable living room with plants and sunlight"
