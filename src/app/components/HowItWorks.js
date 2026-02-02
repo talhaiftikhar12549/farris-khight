@@ -63,7 +63,7 @@ export default function HowItWorks() {
                         >
                             {/* Number Pill */}
                             <div
-                                className="border border-white/30 flex items-center justify-center text-sm font-medium"
+                                className="border border-white flex items-center justify-center text-sm font-medium"
                                 style={{
                                     width: '82px',
                                     height: '45px',
