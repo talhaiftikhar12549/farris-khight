@@ -8,7 +8,7 @@ export default function AccommodationStandards() {
         "/images/accommodation/acc-2.png",
         "/images/accommodation/acc-3.png",
         "/images/accommodation/acc-4.png",
-        "/images/accommodation/talha.png",
+        "/images/accommodation/talha.webp",
 
     ];
 
